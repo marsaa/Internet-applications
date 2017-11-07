@@ -1,0 +1,183 @@
+h1 {
+    padding: 20px;
+    text-align: left;
+    font-size: 200%;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.headbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+ .headbar li {
+    float: left;
+}
+
+.headbar li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.headbar li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.headbar li.dropdown {
+    display: inline-block;
+}
+
+.headbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.headbar .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.headbar .dropdown-content a:hover {background-color: #f1f1f1}
+
+.headbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* styling för matbilder  ------- recept*/
+
+.food {
+    display: block;
+    margin-left: 40px;
+    margin-top: 20px;
+    width: 25%;
+
+}
+body{
+    background-image: url(background.jpg);
+    background-color: #cccccc;
+    font-family: Verdana, sans-serif;
+}
+/* calendar ------- */
+
+ul {list-style-type: none;}
+
+/* Month header */
+.month {
+    padding: 20px 25px;
+    background: #1abc9c;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 20px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size:12px;
+    color:#777;
+}
+.calenderImg{
+    position: relative;
+    top: 20px;
+    max-width: 50%;
+    max-height: 50%;
+}
+p{
+    margin-top:20px ;
+    text-align: center;
+}
+.ingredients {
+    text-align: center;
+    margin-top: -18%;
+}
+.ingredients a{
+    margin-bottom: 10px;
+}
+.steps{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.comments{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.comments h2{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.comments img {
+    height: 20px;
+    width: 20px;
+}
+#user1, #user2, #user3{
+    font-weight: bold;
+    margin: 10px;
+}
+
+.mainPageInfo{
+    margin-top: 10%;
+}
+
+.mainPageInfo p{
+    font-size: 150%;
+}
+.recipe p{
+    font-size: 150%;
+    font-weight: bold;
+}
+.recipe a{
+    font-weight: bold;
+}
+
