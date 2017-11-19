@@ -1,4 +1,9 @@
-<!doctype html>
+<?php
+    session_start();
+    if(isset($_POST['logout'])){
+        session_destroy();
+    }
+?>
 
 <html lang="en">
 <head>
@@ -13,25 +18,42 @@
 </head>
 
 <body>
-<h1>Tasty Recipes</h1>
+    <h1>Tasty Recipes</h1>
 
+    <?php
+        if(isset($_SESSION['logged_in'])){
+            echo "<a id='user'>Logged in as " . $_SESSION['username'] . "</a>";
+        }
+    ?>
 
 <ul class="headbar">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.php">Home</a></li>
     <li class="dropdown">
         <a class="dropbtn">Recipes</a>
         <div class="dropdown-content">
-            <a href="recipes/meatballs.html">Meatballs</a>
-            <a href="recipes/pancake.html">Pancake</a>
+            <a href="recipes/meatballs.php">Meatballs</a>
+            <a href="recipes/pancake.php">Pancake</a>
         </div>
     </li>
-    <li><a href="calendar.html">Calendar</a></li>
+    <li><a href="calendar.php">Calendar</a></li>
+    <?php
+        if(!isset($_SESSION['logged_in'])){
+            echo '<li><a id=\'login\' href=\'login.php\'>Login</a></li>';
+        }
+        else{
+            echo '<li><form method="post" action="index.php">
+                    <input id="login" type="submit" value="Log Out" name="logout">
+                    </form>
+                   </li>';
+        }
+    ?>
+
 </ul>
 
 <div class="mainPageInfo">
     <p>Welcome to Tasty Recipes!</p>
     <p>Here you can find a lot of tasty recipes.</p>
-    <p>Check out the <a href="calendar.html">Calendar</a> by pressing the link!</p>
+    <p>Check out the <a href="calendar.php">Calendar</a> by pressing the link!</p>
 </div>
 
 </body>
